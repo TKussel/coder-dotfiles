@@ -8,6 +8,7 @@ verbis_defaults_rust
 verbis_symlink_cache_dir git
 
 stow -t ~ gitconfig
+stow -t ~ bashconfig
 
 mkdir ~/bin
 
