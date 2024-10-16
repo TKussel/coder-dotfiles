@@ -30,6 +30,14 @@ create_symlinks() {
 
 create_symlinks || true
 
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt install fish python3-pip gh -y
+sudo chsh -s $(which fish)
+sudo usermod -s $(which fish) coder
+mkdir -p ~/.config/fish
+ln -s $script_dir/config.fish ~/.config/fish/config.fish || true
+
+
 
 stow -t ~ gitconfig
 stow -t ~ bashconfig
@@ -39,7 +47,7 @@ mkdir ~/bin
 source ./install_nvim.sh
 
 source $HOME/.cargo/env
-cargo binstall ripgrep bat tre-command -y
+cargo binstall ripgrep bat starship tre-command -y
 
 source $HOME/.profile
 
