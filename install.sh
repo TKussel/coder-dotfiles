@@ -48,6 +48,7 @@ source ./install_nvim.sh
 
 source $HOME/.cargo/env
 cargo binstall ripgrep bat starship tre-command -y
+ln -s $script_dir/starship.toml ~/.config/starship.toml || true
 
 source $HOME/.profile
 
