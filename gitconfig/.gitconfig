@@ -45,10 +45,10 @@
 # a matter of taste (uncomment if you dare)
 
 [core]
-	# fsmonitor = true
-	# untrackedCache = true
+	fsmonitor = true
+	untrackedCache = true
 [merge]
 	# (just 'diff3' if git version < 2.3)
 	conflictstyle = zdiff3 
 [pull]
-	# rebase = true
+	rebase = true
