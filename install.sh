@@ -42,7 +42,7 @@ ln -s $script_dir/config.fish ~/.config/fish/config.fish || true
 stow -t ~ gitconfig
 stow -t ~ bashconfig
 
-mkdir ~/bin
+mkdir -p ~/bin
 
 source ./install_nvim.sh
 
