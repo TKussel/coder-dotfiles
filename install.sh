@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-DEBIAN_FRONTEND=noninteractive sudo apt update -y
+DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 apt update -y
 sudo apt install software-properties-common -y
 source /verbis/functions.sh
 
@@ -31,7 +31,7 @@ create_symlinks() {
 create_symlinks || true
 
 sudo apt-add-repository -y ppa:fish-shell/release-3
-sudo apt install fish python3-pip gh -y
+DEBIAN_FRONTEND=noninteractive sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 apt install fish python3-pip gh -y
 sudo chsh -s $(which fish)
 sudo usermod -s $(which fish) coder
 mkdir -p ~/.config/fish
