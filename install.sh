@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 apt update -y
-DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 apt install software-properties-common -y
+#DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 apt install software-properties-common -y
 source /verbis/functions.sh
 
 verbis_defaults_main
