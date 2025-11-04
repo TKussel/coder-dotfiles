@@ -1,7 +1,11 @@
 fish_add_path ~/.cargo/bin/
 export STARSHIP_CONFIG=$HOME/.config/coderv2/dotfiles/starship.toml
 set -g fish_greeting
-starship init fish | source
+#starship init fish | source
+
+function fish_prompt
+    prmt --code $status '{path::r:cyan} {time::24hs} {git:purple::on :} {rust:red:s: 🦀} {ok:green:❯}{fail:red::code:✗} '
+end
 
 alias py "python3"
 alias cat "bat"
