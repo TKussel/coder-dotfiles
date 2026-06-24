@@ -39,6 +39,13 @@ zstyle ':completion:*' menu select
 
 zstyle ':completion::complete:*' use-cache yes
 
+# Autocomplete at up/down
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "$terminfo[kcuu1]" history-beginning-search-backward-end
+bindkey "$terminfo[kcud1]" history-beginning-search-forward-end
+
 if [[ -r ~/.aliasrc ]]; then
     . ~/.aliasrc
 fi
