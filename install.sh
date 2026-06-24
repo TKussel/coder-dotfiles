@@ -49,7 +49,7 @@ mkdir -p ~/bin
 # source ./install_nvim.sh
 
 source $HOME/.cargo/env
-cargo binstall ripgrep bat prmt tre-command -y
+cargo binstall ripgrep bat prmt tre-command just -y
 #cargo binstall starship
 #ln -s $script_dir/starship.toml ~/.config/starship.toml || true
 
