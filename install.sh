@@ -34,9 +34,10 @@ sudo apt-add-repository -y ppa:fish-shell/release-3
 DEBIAN_FRONTEND=noninteractive sudo DEBIAN_FRONTEND=noninteractive RUNLEVEL=1 apt install fish python3-pip gh -y
 sudo chsh -s $(which fish)
 sudo usermod -s $(which fish) coder
-mkdir -p ~/.config/fish
+mkdir -p ~/.config/fish ~/.config/jj ~/.config/nix
 ln -s $script_dir/config.fish ~/.config/fish/config.fish || true
-
+ln -s $script_dir/jjconfig/jj-config.toml ~/.config/jj/jj-config.toml || true
+ln -s $script_dir/nix.conf ~/.config/nix/nix.conf || true
 
 
 stow -t ~ gitconfig
@@ -44,14 +45,21 @@ stow -t ~ bashconfig
 
 mkdir -p ~/bin
 
-source ./install_nvim.sh
+# source ./install_nvim.sh
 
 source $HOME/.cargo/env
 cargo binstall ripgrep bat prmt tre-command -y
 #cargo binstall starship
 #ln -s $script_dir/starship.toml ~/.config/starship.toml || true
 
+curl -L https://nixos.org/nix/install | sh -s -- --no-daemon || true
+. /home/coder/.nix-profile/etc/profile.d/nix.sh
+
 source $HOME/.profile
+
+nix profile add nixpkgs#jujutsu
+nix profile add nixpkgs#neovim
+git clone --depth 1 git@github.com:TKussel/astrovim-config.git /home/coder/.config/nvim
 
 # If Samply.Beam not yet present, clone the develop branch
 verbis_clone git@github.com:samply/beam develop

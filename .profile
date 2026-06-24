@@ -18,3 +18,5 @@ alias gd='git diff'
 alias gl='git pull'
 alias gfp!='git push --force'
 alias dockerip="docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+
+if [ -e /home/coder/.nix-profile/etc/profile.d/nix.sh ]; then . /home/coder/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
