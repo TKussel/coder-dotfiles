@@ -36,7 +36,7 @@ create_symlinks || true
 sudo apt install zsh -y
 sudo chsh -s $(which zsh)
 sudo usermod -s $(which zsh) coder
-mkdir -p ~/.config/fish ~/.config/jj ~/.config/nix
+mkdir -p ~/.config/fish ~/.config/jj ~/.config/nix ~/.config/zsh
 ln -s $script_dir/config.fish ~/.config/fish/config.fish || true
 ln -s $script_dir/jjconfig/jj-config.toml ~/.config/jj/jj-config.toml || true
 ln -s $script_dir/nix.conf ~/.config/nix/nix.conf || true
@@ -46,7 +46,7 @@ stow -t ~ gitconfig
 stow -t ~ bashconfig
 stow -t ~ zshconfig
 
-git clone --depth 1 https://github.com/agkozak/agkozak-zsh-prompt /home/.config/zsh/prompt
+git clone --depth 1 https://github.com/agkozak/agkozak-zsh-prompt ~/.config/zsh/prompt
 
 mkdir -p ~/bin
 
