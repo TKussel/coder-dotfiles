@@ -42,3 +42,5 @@ zstyle ':completion::complete:*' use-cache yes
 if [[ -r ~/.aliasrc ]]; then
     . ~/.aliasrc
 fi
+
+. ~/.config/zsh/prompt/agkozak-zsh-prompt.plugin.zsh

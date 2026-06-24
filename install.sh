@@ -46,6 +46,8 @@ stow -t ~ gitconfig
 stow -t ~ bashconfig
 stow -t ~ zshconfig
 
+git clone --depth 1 https://github.com/agkozak/agkozak-zsh-prompt /home/.config/zsh/prompt
+
 mkdir -p ~/bin
 
 # source ./install_nvim.sh
