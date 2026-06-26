@@ -46,7 +46,7 @@ stow -t ~ gitconfig
 stow -t ~ bashconfig
 stow -t ~ zshconfig
 
-git clone --depth 1 https://github.com/agkozak/agkozak-zsh-prompt ~/.config/zsh/prompt
+git clone --depth 1 https://github.com/agkozak/agkozak-zsh-prompt ~/.config/zsh/prompt || true
 
 mkdir -p ~/bin
 
@@ -61,13 +61,3 @@ curl -L https://nixos.org/nix/install | sh -s -- --no-daemon || true
 . /home/coder/.nix-profile/etc/profile.d/nix.sh
 
 source $HOME/.profile
-
-nix profile add nixpkgs#jujutsu
-nix profile add nixpkgs#neovim
-git clone --depth 1 git@github.com:TKussel/astrovim-config.git /home/coder/.config/nvim
-
-# If Samply.Beam not yet present, clone the develop branch
-verbis_clone git@github.com:samply/beam develop
-
-# Same for the Bridgehead -- but here, clone the default branch
-verbis_clone git@github.com:samply/bridgehead develop
