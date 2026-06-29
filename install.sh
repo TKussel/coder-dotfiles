@@ -40,7 +40,7 @@ mkdir -p ~/.config/fish ~/.config/jj ~/.config/nix ~/.config/zsh
 ln -s $script_dir/config.fish ~/.config/fish/config.fish || true
 ln -s $script_dir/jjconfig/jj-config.toml ~/.config/jj/jj-config.toml || true
 ln -s $script_dir/nix.conf ~/.config/nix/nix.conf || true
-
+ln -s $script_dir/second_stage.sh ~ || true
 
 stow -t ~ gitconfig
 stow -t ~ bashconfig

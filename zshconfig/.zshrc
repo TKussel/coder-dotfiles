@@ -51,3 +51,4 @@ if [[ -r ~/.aliasrc ]]; then
 fi
 
 . ~/.config/zsh/prompt/agkozak-zsh-prompt.plugin.zsh
+. ~/.cargo/env
