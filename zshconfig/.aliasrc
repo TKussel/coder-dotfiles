@@ -13,4 +13,4 @@ alias dockerip="docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddres
 alias k='kubectl'
 alias dc='docker compose'
 alias dr='docker run --rm'
-
+alias vim="nvim"
