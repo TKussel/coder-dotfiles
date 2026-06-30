@@ -31,9 +31,7 @@ create_symlinks() {
 
 create_symlinks || true
 
-# sudo apt-add-repository -y ppa:fish-shell/release-3
-# sudo apt install fish python3-pip gh -y
-sudo apt install zsh -y
+sudo apt install zsh python3-pip gh -y
 sudo chsh -s $(which zsh)
 sudo usermod -s $(which zsh) coder
 mkdir -p ~/.config/fish ~/.config/jj ~/.config/nix ~/.config/zsh
@@ -48,14 +46,8 @@ stow -t ~ zshconfig
 
 git clone --depth 1 https://github.com/agkozak/agkozak-zsh-prompt ~/.config/zsh/prompt || true
 
-mkdir -p ~/bin
-
-# source ./install_nvim.sh
-
 source $HOME/.cargo/env
 cargo binstall ripgrep bat prmt tre-command just -y
-#cargo binstall starship
-#ln -s $script_dir/starship.toml ~/.config/starship.toml || true
 
 curl -L https://nixos.org/nix/install | sh -s -- --no-daemon || true
 . /home/coder/.nix-profile/etc/profile.d/nix.sh
