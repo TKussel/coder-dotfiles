@@ -49,7 +49,4 @@ git clone --depth 1 https://github.com/agkozak/agkozak-zsh-prompt ~/.config/zsh/
 source $HOME/.cargo/env
 cargo binstall ripgrep bat prmt tre-command just -y
 
-curl -L https://nixos.org/nix/install | sh -s -- --no-daemon || true
-. /home/coder/.nix-profile/etc/profile.d/nix.sh
-
 source $HOME/.profile

@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+curl -L https://nixos.org/nix/install | sh -s -- --no-daemon || true
+. /home/coder/.nix-profile/etc/profile.d/nix.sh
+
 nix profile add nixpkgs#jujutsu
 nix profile add nixpkgs#neovim
 git clone --depth 1 git@github.com:TKussel/astrovim-config.git /home/coder/.config/nvim || true
