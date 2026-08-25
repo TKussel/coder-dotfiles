@@ -31,7 +31,7 @@ create_symlinks() {
 
 create_symlinks || true
 
-sudo apt install zsh python3-pip gh -y
+sudo apt install zsh python3-pip gh tmux -y
 sudo chsh -s $(which zsh)
 sudo usermod -s $(which zsh) coder
 mkdir -p ~/.config/fish ~/.config/jj ~/.config/nix ~/.config/zsh
